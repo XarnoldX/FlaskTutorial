@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ user.username }}!</h1>{# logged in user name from the user object #}
+    <h1>Hi, {{ current_user.username }}!</h1>{# logged in user name from the user object #}
     {% for post in posts %} {# loop through the posts from the posts object #}
     <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>{# post user and the post #}
     {% endfor %}
